@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cube : MonoBehaviour
-{   
+{
+    public Rigidbody2D rigidbody;
     string TheNameOfPlayer = "wassim";
     int AgeOfPlayer=25;
     float TallOfPlayer=1.74f; 
@@ -20,19 +21,19 @@ public class Cube : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("UpArrow key was pressed");
+            rigidbody.velocity = new Vector2(0f, 10f)
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("DownArrow key was pressed");
+            rigidbody.velocity = new Vector2(0f, -10f);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Debug.Log("LeftArrow key was pressed");
+            rigidbody.velocity = new Vector2(-10f, 0f);
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Debug.Log("RightArrow key was pressed");
+            rigidbody.velocity = new Vector2(10f, 0f);
         }
     }
 }
