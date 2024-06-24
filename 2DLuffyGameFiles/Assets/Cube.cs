@@ -16,8 +16,23 @@ public class Cube : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+ void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Debug.Log("UpArrow key was pressed");
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Debug.Log("DownArrow key was pressed");
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Debug.Log("LeftArrow key was pressed");
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Debug.Log("RightArrow key was pressed");
+        }
     }
 }
